@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги — МАРШАЛ Event Agency</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .svc-row { display:grid; grid-template-columns:1fr 1fr; gap:0; border-bottom:1px solid var(--border); }
+    .svc-row:nth-child(even) { direction:rtl; }
+    .svc-row:nth-child(even) > * { direction:ltr; }
+    .svc-visual { aspect-ratio:4/3; background:var(--off2); position:relative; overflow:hidden; }
+    .svc-visual-ph { width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink3); }
+    .svc-body { padding:80px 60px; display:flex; flex-direction:column; justify-content:center; background:var(--off); }
+    .svc-row:nth-child(even) .svc-body { background:var(--w); }
+    .svc-num { font-family:'Unbounded',sans-serif;font-size:0.55rem;letter-spacing:0.2em;color:var(--ink3);margin-bottom:32px; }
+    .svc-title { font-family:'Unbounded',sans-serif;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:300;color:var(--ink);line-height:1.2; }
+    .svc-desc { font-size:0.85rem;color:var(--ink3);line-height:1.8;margin-top:20px; }
+    .svc-list { margin-top:24px;display:flex;flex-direction:column;gap:10px; }
+    .svc-list-item { display:flex;align-items:center;gap:12px;font-size:0.78rem;color:var(--ink2); }
+    .svc-list-item::before { content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0; }
+    .pricing-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border); }
+    .pricing-card { padding:48px 36px;border-right:1px solid var(--border); }
+    .pricing-card:last-child { border-right:none; }
+    .pricing-card.featured { background:var(--ink);color:var(--w); }
+    .pricing-name { font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink3); }
+    .pricing-card.featured .pricing-name { color:var(--gold); }
+    .pricing-price { font-family:'Unbounded',sans-serif;font-size:2rem;font-weight:300;color:var(--ink);margin:20px 0; }
+    .pricing-card.featured .pricing-price { color:var(--w); }
+    .pricing-items { display:flex;flex-direction:column;gap:12px;margin-top:28px; }
+    .pricing-item { display:flex;align-items:center;gap:10px;font-size:0.78rem;color:var(--ink3); }
+    .pricing-card.featured .pricing-item { color:rgba(255,255,255,0.55); }
+    .pricing-item::before { content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0; }
+    @media(max-width:900px){ .svc-row,.svc-row:nth-child(even){grid-template-columns:1fr;direction:ltr} .svc-body{padding:48px 24px} .pricing-grid{grid-template-columns:1fr} .pricing-card{border-right:none;border-bottom:1px solid var(--border)} .pricing-card:last-child{border-bottom:none} }
+  </style>
+</head>
+<body>
+<div class="cur-dot"></div><div class="cur-ring"></div>
+<div class="mob-overlay"><ul class="mob-nav">
+  <li><a href="index.html">Главная</a></li><li><a href="about.html">О нас</a></li>
+  <li><a href="services.html">Услуги</a></li><li><a href="portfolio.html">Портфолио</a></li>
+  <li><a href="cases.html">Кейсы</a></li><li><a href="reviews.html">Отзывы</a></li>
+  <li><a href="blog.html">Блог</a></li><li><a href="contacts.html">Контакты</a></li>
+</ul></div>
+<header class="nav">
+  <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="МАРШАЛ" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="nav-logo-text" style="display:none">МАРШАЛ</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Главная</a></li><li><a href="about.html">О нас</a></li><li><a href="services.html" class="active">Услуги</a></li><li><a href="portfolio.html">Портфолио</a></li><li><a href="cases.html">Кейсы</a></li><li><a href="reviews.html">Отзывы</a></li><li><a href="blog.html">Блог</a></li><li><a href="contacts.html">Контакты</a></li>
+  </ul>
+  <a href="contacts.html" class="nav-cta"><span>Обсудить проект</span></a>
+  <div class="burger"><span></span><span></span><span></span></div>
+</header>
+
+<div class="inner-hero">
+  <div class="inner-hero-grid"></div>
+  <div class="inner-hero-num">02</div>
+  <div class="inner-tag">Что мы делаем</div>
+  <h1 class="inner-title"><em>Услуги</em></h1>
+</div>
+
+<div class="svc-row">
+  <div class="svc-visual" data-reveal="left"><div class="svc-visual-ph">Корпоратив</div></div>
+  <div class="svc-body" data-reveal="right">
+    <div class="svc-num">01</div>
+    <div class="svc-title">Корпоративные мероприятия</div>
+    <div class="svc-desc">Корпоративы, гала-вечера, юбилеи компаний, тимбилдинги — создаём события, которые укрепляют команду и формируют корпоративную культуру.</div>
+    <div class="svc-list">
+      <div class="svc-list-item">Разработка концепции под корпоративный стиль</div>
+      <div class="svc-list-item">Подбор площадки и декорации</div>
+      <div class="svc-list-item">Шоу-программа и артисты</div>
+      <div class="svc-list-item">Кейтеринг и техническое обеспечение</div>
+    </div>
+  </div>
+</div>
+<div class="svc-row">
+  <div class="svc-visual" data-reveal="right"><div class="svc-visual-ph">Городские события</div></div>
+  <div class="svc-body" data-reveal="left">
+    <div class="svc-num">02</div>
+    <div class="svc-title">Городские мероприятия</div>
+    <div class="svc-desc">Дни города, фестивали, масштабные открытые праздники — организуем события для тысяч участников с полной инфраструктурой.</div>
+    <div class="svc-list">
+      <div class="svc-list-item">Планирование и координация масштабных ивентов</div>
+      <div class="svc-list-item">Работа с муниципальными структурами</div>
+      <div class="svc-list-item">Сцены, звук, свет, экраны</div>
+      <div class="svc-list-item">Безопасность и логистика</div>
+    </div>
+  </div>
+</div>
+<div class="svc-row">
+  <div class="svc-visual" data-reveal="left"><div class="svc-visual-ph">Форумы</div></div>
+  <div class="svc-body" data-reveal="right">
+    <div class="svc-num">03</div>
+    <div class="svc-title">Форумы и конференции</div>
+    <div class="svc-desc">Бизнес-форумы, отраслевые конференции, саммиты, выставки — полное техническое и организационное сопровождение деловых мероприятий.</div>
+    <div class="svc-list">
+      <div class="svc-list-item">Техническое оснащение (звук, видео, трансляция)</div>
+      <div class="svc-list-item">Регистрация и работа с участниками</div>
+      <div class="svc-list-item">Синхронный перевод</div>
+      <div class="svc-list-item">Нетворкинг-зоны и выставочные стенды</div>
+    </div>
+  </div>
+</div>
+<div class="svc-row">
+  <div class="svc-visual" data-reveal="right"><div class="svc-visual-ph">Частные события</div></div>
+  <div class="svc-body" data-reveal="left">
+    <div class="svc-num">04</div>
+    <div class="svc-title">Частные события</div>
+    <div class="svc-desc">Свадьбы, юбилеи, детские праздники, семейные торжества — создаём личные истории с вниманием к каждой эмоции.</div>
+    <div class="svc-list">
+      <div class="svc-list-item">Выездная регистрация и церемония</div>
+      <div class="svc-list-item">Флористика и декор площадки</div>
+      <div class="svc-list-item">Ведущий, фото и видеосъёмка</div>
+      <div class="svc-list-item">Торт, кейтеринг, развлечения для гостей</div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<section class="section" style="background:var(--off)">
+  <div data-reveal>
+    <div class="section-tag">Пакеты услуг</div>
+    <h2 class="section-title">Выберите<br>свой <em>формат</em></h2>
+  </div>
+  <div class="pricing-grid" style="margin-top:56px">
+    <div class="pricing-card" data-reveal>
+      <div class="pricing-name">Старт</div>
+      <div class="pricing-price">от 80 000 ₽</div>
+      <div style="font-size:0.72rem;color:var(--ink3)">До 50 гостей</div>
+      <div class="pricing-items">
+        <div class="pricing-item">Разработка концепции</div>
+        <div class="pricing-item">Подбор площадки</div>
+        <div class="pricing-item">Координатор на мероприятии</div>
+        <div class="pricing-item">Базовый декор</div>
+        <div class="pricing-item">Ведущий</div>
+      </div>
+      <div style="margin-top:36px"><a href="contacts.html" class="btn-outline" style="width:100%;justify-content:center">Выбрать</a></div>
+    </div>
+    <div class="pricing-card featured" data-reveal data-delay="2">
+      <div class="pricing-name">Стандарт</div>
+      <div class="pricing-price">от 250 000 ₽</div>
+      <div style="font-size:0.72rem;color:rgba(255,255,255,0.35)">50–200 гостей</div>
+      <div class="pricing-items">
+        <div class="pricing-item">Уникальная концепция</div>
+        <div class="pricing-item">Полный декор и флористика</div>
+        <div class="pricing-item">Команда координаторов</div>
+        <div class="pricing-item">Шоу-программа</div>
+        <div class="pricing-item">Фото и видеосъёмка</div>
+        <div class="pricing-item">Кейтеринг</div>
+      </div>
+      <div style="margin-top:36px"><a href="contacts.html" class="btn-primary" style="width:100%;justify-content:center;border:none;cursor:none">Выбрать</a></div>
+    </div>
+    <div class="pricing-card" data-reveal data-delay="4">
+      <div class="pricing-name">Премиум</div>
+      <div class="pricing-price">от 800 000 ₽</div>
+      <div style="font-size:0.72rem;color:var(--ink3)">200+ гостей</div>
+      <div class="pricing-items">
+        <div class="pricing-item">Всё из пакета Стандарт</div>
+        <div class="pricing-item">Персональный продюсер</div>
+        <div class="pricing-item">Масштабное техническое шоу</div>
+        <div class="pricing-item">Звёздный артист</div>
+        <div class="pricing-item">Профессиональный монтаж видео</div>
+        <div class="pricing-item">Послеивентный отчёт</div>
+      </div>
+      <div style="margin-top:36px"><a href="contacts.html" class="btn-outline" style="width:100%;justify-content:center">Выбрать</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-bg-text">УСЛУГИ</div>
+  <div class="cta-content">
+    <div class="cta-tag">Индивидуальный расчёт</div>
+    <h2 class="cta-title">Не нашли<br>свой <strong>формат?</strong></h2>
+    <p class="cta-desc">Мы подберём решение под любую задачу и бюджет. Расскажите о вашем событии.</p>
+    <div style="margin-top:40px"><a href="contacts.html" class="btn-primary" style="font-size:0.72rem;letter-spacing:0.2em;padding:20px 48px">Получить предложение</a></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div><div class="footer-logo"><img src="images/logo.png" alt="МАРШАЛ" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="footer-logo-text" style="display:none">МАРШАЛ</span></div><div class="footer-tagline">Более 25 лет создаём события, которые запоминаются на всю жизнь.</div></div>
+    <div><div class="footer-col-title">Навигация</div><div class="footer-links"><a href="index.html">Главная</a><a href="about.html">О компании</a><a href="services.html">Услуги</a><a href="portfolio.html">Портфолио</a></div></div>
+    <div><div class="footer-col-title">Ещё</div><div class="footer-links"><a href="cases.html">Кейсы</a><a href="reviews.html">Отзывы</a><a href="blog.html">Блог</a><a href="contacts.html">Контакты</a></div></div>
+    <div><div class="footer-col-title">Контакты</div><div class="footer-links"><a href="tel:+79001234567">+7 (900) 123-45-67</a><a href="mailto:info@marshal-event.ru">info@marshal-event.ru</a><a href="https://wa.me/79001234567" target="_blank">WhatsApp</a></div></div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copy">© 2026 МАРШАЛ Event Agency.</div><div class="footer-socials"><a href="#" class="footer-social">вк</a><a href="#" class="footer-social">tg</a><a href="#" class="footer-social">wa</a></div></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

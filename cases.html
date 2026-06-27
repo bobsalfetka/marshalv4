@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кейсы — МАРШАЛ Event Agency</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .case-hero { display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:520px;border-bottom:1px solid var(--border); }
+    .case-hero:nth-child(even) { direction:rtl; }
+    .case-hero:nth-child(even)>*{direction:ltr;}
+    .case-visual { background:var(--off2);position:relative;overflow:hidden;min-height:420px;display:flex;align-items:center;justify-content:center;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink3); }
+    .case-body { padding:80px 60px;display:flex;flex-direction:column;justify-content:center; }
+    .case-body.dark { background:var(--ink); }
+    .case-num { font-family:'Unbounded',sans-serif;font-size:0.55rem;letter-spacing:0.2em;color:var(--ink3);margin-bottom:24px; }
+    .case-body.dark .case-num { color:rgba(255,255,255,0.25); }
+    .case-title { font-family:'Unbounded',sans-serif;font-size:clamp(1.4rem,2.5vw,2.2rem);font-weight:300;color:var(--ink);line-height:1.15; }
+    .case-body.dark .case-title { color:var(--w); }
+    .case-tags { display:flex;gap:8px;flex-wrap:wrap;margin-top:20px; }
+    .case-tag-item { font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;border:1px solid var(--border);padding:7px 14px;color:var(--ink3); }
+    .case-body.dark .case-tag-item { border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.35); }
+    .case-desc { font-size:0.85rem;color:var(--ink3);line-height:1.8;margin-top:24px; }
+    .case-body.dark .case-desc { color:rgba(255,255,255,0.45); }
+    .case-metrics { display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);margin-top:40px; }
+    .case-body.dark .case-metrics { border-color:rgba(255,255,255,0.08); }
+    .case-metric { padding:20px;border-right:1px solid var(--border);text-align:center; }
+    .case-body.dark .case-metric { border-color:rgba(255,255,255,0.08); }
+    .case-metric:last-child { border-right:none; }
+    .case-metric-val { font-family:'Unbounded',sans-serif;font-size:1.3rem;font-weight:300;color:var(--gold); }
+    .case-metric-label { font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink3);margin-top:6px; }
+    .case-body.dark .case-metric-label { color:rgba(255,255,255,0.3); }
+    @media(max-width:900px){ .case-hero,.case-hero:nth-child(even){grid-template-columns:1fr;direction:ltr} .case-body{padding:48px 24px} .case-visual{min-height:260px} }
+  </style>
+</head>
+<body>
+<div class="cur-dot"></div><div class="cur-ring"></div>
+<div class="mob-overlay"><ul class="mob-nav">
+  <li><a href="index.html">Главная</a></li><li><a href="about.html">О нас</a></li>
+  <li><a href="services.html">Услуги</a></li><li><a href="portfolio.html">Портфолио</a></li>
+  <li><a href="cases.html">Кейсы</a></li><li><a href="reviews.html">Отзывы</a></li>
+  <li><a href="blog.html">Блог</a></li><li><a href="contacts.html">Контакты</a></li>
+</ul></div>
+<header class="nav">
+  <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="МАРШАЛ" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="nav-logo-text" style="display:none">МАРШАЛ</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Главная</a></li><li><a href="about.html">О нас</a></li><li><a href="services.html">Услуги</a></li><li><a href="portfolio.html">Портфолио</a></li><li><a href="cases.html" class="active">Кейсы</a></li><li><a href="reviews.html">Отзывы</a></li><li><a href="blog.html">Блог</a></li><li><a href="contacts.html">Контакты</a></li>
+  </ul>
+  <a href="contacts.html" class="nav-cta"><span>Обсудить проект</span></a>
+  <div class="burger"><span></span><span></span><span></span></div>
+</header>
+
+<div class="inner-hero">
+  <div class="inner-hero-grid"></div>
+  <div class="inner-hero-num">04</div>
+  <div class="inner-tag">Детальные истории</div>
+  <h1 class="inner-title"><em>Кейсы</em></h1>
+</div>
+
+<div class="case-hero">
+  <div class="case-visual" data-reveal="left">День города</div>
+  <div class="case-body" data-reveal="right">
+    <div class="case-num">Кейс 01 · 2024</div>
+    <h2 class="case-title">День города<br>на 15 000 гостей</h2>
+    <div class="case-tags">
+      <span class="case-tag-item">Городское</span>
+      <span class="case-tag-item">15 000 гостей</span>
+      <span class="case-tag-item">3 дня</span>
+    </div>
+    <p class="case-desc">Трёхдневный городской праздник с 5 сценами, 40 артистами и масштабным фейерверком в финале. Полная инфраструктура: питание, безопасность, транспортная логистика для 15 000 участников.</p>
+    <div class="case-metrics">
+      <div class="case-metric"><div class="case-metric-val">15 000</div><div class="case-metric-label">Гостей</div></div>
+      <div class="case-metric"><div class="case-metric-val">5</div><div class="case-metric-label">Сцен</div></div>
+      <div class="case-metric"><div class="case-metric-val">40+</div><div class="case-metric-label">Артистов</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="case-hero">
+  <div class="case-visual" data-reveal="right">Северсталь гала</div>
+  <div class="case-body dark" data-reveal="left">
+    <div class="case-num">Кейс 02 · 2023</div>
+    <h2 class="case-title">Гала-вечер<br>Северсталь · 300 гостей</h2>
+    <div class="case-tags">
+      <span class="case-tag-item">Корпоратив</span>
+      <span class="case-tag-item">300 гостей</span>
+      <span class="case-tag-item">VIP</span>
+    </div>
+    <p class="case-desc">Изысканный гала-вечер по случаю 30-летия компании. Концепция «Эпохи Северстали» с иммерсивными инсталляциями, живым оркестром и персонализированными подарками для каждого гостя.</p>
+    <div class="case-metrics">
+      <div class="case-metric"><div class="case-metric-val">300</div><div class="case-metric-label">Гостей</div></div>
+      <div class="case-metric"><div class="case-metric-val">45</div><div class="case-metric-label">Артистов</div></div>
+      <div class="case-metric"><div class="case-metric-val">12</div><div class="case-metric-label">Часов шоу</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="case-hero">
+  <div class="case-visual" data-reveal="left">Бизнес-форум</div>
+  <div class="case-body" data-reveal="right">
+    <div class="case-num">Кейс 03 · 2023</div>
+    <h2 class="case-title">Бизнес-форум<br>500 участников</h2>
+    <div class="case-tags">
+      <span class="case-tag-item">Форум</span>
+      <span class="case-tag-item">500 участников</span>
+      <span class="case-tag-item">2 дня</span>
+    </div>
+    <p class="case-desc">Двухдневный отраслевой форум с 3 параллельными залами, онлайн-трансляцией на 2 000 зрителей, нетворкинг-зоной и выставкой 25 компаний. Организовали питание, трансфер и размещение для иногородних участников.</p>
+    <div class="case-metrics">
+      <div class="case-metric"><div class="case-metric-val">500</div><div class="case-metric-label">Участников</div></div>
+      <div class="case-metric"><div class="case-metric-val">2 000</div><div class="case-metric-label">Онлайн</div></div>
+      <div class="case-metric"><div class="case-metric-val">25</div><div class="case-metric-label">Экспонентов</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="case-hero">
+  <div class="case-visual" data-reveal="right">Юбилей</div>
+  <div class="case-body dark" data-reveal="left">
+    <div class="case-num">Кейс 04 · 2024</div>
+    <h2 class="case-title">Юбилей 70 лет<br>в стиле Art Deco</h2>
+    <div class="case-tags">
+      <span class="case-tag-item">Частное</span>
+      <span class="case-tag-item">80 гостей</span>
+      <span class="case-tag-item">Art Deco</span>
+    </div>
+    <p class="case-desc">Камерный юбилей в стиле 1920-х годов с живым джаз-оркестром, декором из 3 000 живых цветов, персонализированным меню и иммерсивным театральным перформансом в начале вечера.</p>
+    <div class="case-metrics">
+      <div class="case-metric"><div class="case-metric-val">80</div><div class="case-metric-label">Гостей</div></div>
+      <div class="case-metric"><div class="case-metric-val">3 000</div><div class="case-metric-label">Живых цветов</div></div>
+      <div class="case-metric"><div class="case-metric-val">12</div><div class="case-metric-label">Музыкантов</div></div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div><div class="footer-logo"><img src="images/logo.png" alt="МАРШАЛ" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="footer-logo-text" style="display:none">МАРШАЛ</span></div><div class="footer-tagline">Более 25 лет создаём события, которые запоминаются на всю жизнь.</div></div>
+    <div><div class="footer-col-title">Навигация</div><div class="footer-links"><a href="index.html">Главная</a><a href="about.html">О компании</a><a href="services.html">Услуги</a><a href="portfolio.html">Портфолио</a></div></div>
+    <div><div class="footer-col-title">Ещё</div><div class="footer-links"><a href="cases.html">Кейсы</a><a href="reviews.html">Отзывы</a><a href="blog.html">Блог</a><a href="contacts.html">Контакты</a></div></div>
+    <div><div class="footer-col-title">Контакты</div><div class="footer-links"><a href="tel:+79001234567">+7 (900) 123-45-67</a><a href="mailto:info@marshal-event.ru">info@marshal-event.ru</a><a href="https://wa.me/79001234567" target="_blank">WhatsApp</a></div></div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copy">© 2026 МАРШАЛ Event Agency.</div><div class="footer-socials"><a href="#" class="footer-social">вк</a><a href="#" class="footer-social">tg</a><a href="#" class="footer-social">wa</a></div></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
